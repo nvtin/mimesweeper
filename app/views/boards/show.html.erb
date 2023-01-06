@@ -1,4 +1,8 @@
 <div class="board-page">
+  <div class="add-new-board pt-3">
+    <a class="btn btn-outline-primary" href="/boards/new" role="button">Generate new board</a>
+    <a class="btn btn-outline-primary" href="/boards" role="button">View all boards</a>
+  </div>
   <div class="pt-4 pb-3">
     <h1><%= @board.name %></h1>
     <span>Size: <%= @board.width %> x <%= @board.height%> </span>
