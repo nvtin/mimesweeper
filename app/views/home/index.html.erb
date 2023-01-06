@@ -1,0 +1,16 @@
+<div class="board-list">
+  <div class="mb-3 mt-4">
+    <h3>Recent mimesweeper boards</h5>
+  </div>
+  <div class="add-new-board pb-3">
+    <a class="btn btn-primary" href="/boards/new" role="button">Generate new board</a>
+  </div>
+  <div class="list-group">
+    <% @boards.each do |board| %>
+      <%= render partial: 'shared/board_card', locals: { board: board } %>
+    <% end %>
+  </div>
+  <div class="add-new-board pt-3">
+    <a class="btn btn-link" href="/boards" role="button">View all generated boards</a>
+  </div>
+</div>

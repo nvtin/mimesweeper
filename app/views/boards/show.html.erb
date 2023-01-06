@@ -1,0 +1,22 @@
+<div class="board-page">
+  <div class="pt-4 pb-3">
+    <h1><%= @board.name %></h1>
+    <span>Size: <%= @board.width %> x <%= @board.height%> </span>
+  </div>
+
+  <div class="board-details">
+    <table class="mimesweepers">
+      <% @board.cells.order(:row, :column).group_by(&:row).each do |_, row| %>
+        <tr>
+          <% row.each do |cell| %>
+            <td>
+              <% if cell.is_mime %>
+                <i class="fa-sharp fa-solid fa-bomb"></i>
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

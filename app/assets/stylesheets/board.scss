@@ -1,0 +1,39 @@
+.board-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.board-details {
+  overflow: auto;
+  flex-grow: 1;
+
+  table.mimesweepers {
+    margin:0 auto;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-sizing: border-box;
+    background-color: #ccc6c6;
+
+    tr {
+      background-color: transparent;
+
+      td {
+        margin:0;
+        padding:0;
+        height: 30px;
+        width: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        font-size: 1em;
+        font-family: serif;
+        text-align: center;
+        border: 3px solid #ccc6c6;
+        background-color: white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

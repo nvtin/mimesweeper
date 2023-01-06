@@ -1,0 +1,11 @@
+<div class="list-group-item list-group-item-action" aria-current="true">
+  <div class="d-flex w-100 justify-content-between">
+    <%= link_to(board_url(board), html_options = {}) do %>
+      <h5 class="mb-1">
+        <%= board.name %>
+      </h5>
+    <% end %>
+    <small><%= time_ago_in_words(board.created_at) %></small>
+  </div>
+  <p class="mb-1">Made by: <%= board.creator_email %> </p>
+</div>

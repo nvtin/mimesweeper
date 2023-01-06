@@ -1,0 +1,19 @@
+<div class="board-list">
+  <div class="pb-3 pt-3">
+    <h3>All mimesweeper boards</h5>
+  </div>
+  <div class="add-new-board pb-3">
+    <a class="btn btn-link" href="/" role="button">Back to home</a>
+  </div>
+
+  <%= render "shared/search_form" %>
+
+  <div class="list-group">
+    <% @boards.each do |board| %>
+      <%= render partial: 'shared/board_card', locals: { board: board } %>
+    <% end %>
+  </div>
+  <div class="pagination mt-3">
+    <%== pagy_bootstrap_nav(@pagy, link_extra: 'data-action="hello#world"') %>
+  </div>
+</div>
