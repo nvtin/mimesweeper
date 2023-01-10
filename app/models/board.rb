@@ -3,7 +3,8 @@ class Board < ApplicationRecord
 
   validates :name, :creator_email, :height, :width, :num_mimes, presence: true
   validates :height, :width, numericality: { only_integer: true, greater_than: 0 }
-  validates :num_mimes, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :num_mimes, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: -> (board) { board.width * board.height }
+}
 
   has_many :cells, dependent: :delete_all
 

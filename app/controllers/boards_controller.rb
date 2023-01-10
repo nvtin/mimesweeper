@@ -19,7 +19,7 @@ class BoardsController < ApplicationController
       board = BoardCreator.new(board_params).call
       redirect_to board, notice: 'Board was successfully created.'
     rescue StandardError => e
-      flash.now[:alert] = 'There are something wrong, please try again. Thank you!'
+      flash.now[:alert] = e.record.errors.full_messages.join(',')
       @board = Board.new(board_params)
       render :new
     end

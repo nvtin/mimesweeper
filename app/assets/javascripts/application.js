@@ -1,2 +1,0 @@
-import "popper"
-import "bootstrap"
