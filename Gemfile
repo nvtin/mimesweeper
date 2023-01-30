@@ -60,3 +60,6 @@ gem "font-awesome-sass", "~> 6.2.1"
 gem 'pagy', '~> 6.0' # pagination gem
 gem 'pg_search' # Full text search with postgresql
 gem "importmap-rails", "~> 1.1"
+
+gem "dry-rails"
+gem 'dry-transaction', '~> 0.15.0'

@@ -4,8 +4,7 @@ class CellsCreator
 	end
 
 	def call
-    raise 'Board is required to create cell' if board.blank?
-
+		raise 'Board is required to create cell' if board.blank?
 		board.cells.create!(cell_attributes)
 	end
 
